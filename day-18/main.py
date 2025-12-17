@@ -1,20 +1,22 @@
-from turtle import Turtle, Screen
+# método 01
+# import turtle
+# tim = turtle.Turtle()
 
-tim = Turtle()
-tim.shape("turtle")
-tim.color("blue")
+# método 02
+# in this method you don't need write the class 'turtle' every time
+# you create a object !
 
-# timmy_the_turtle.forward(100)
-# timmy_the_turtle.right(90)
-# timmy_the_turtle.forward(100)
-# timmy_the_turtle.right(90)
-# timmy_the_turtle.forward(100)
-# timmy_the_turtle.right(90)
-# timmy_the_turtle.forward(100)
+# from turtle import Turtle
 
-for _ in range(4):
-    tim.forward(100)
-    tim.right(90)
+# tim = Turtle()
+# tom = Turtle()
+# jerry = Turtle()
 
-screen = Screen()
-screen.exitonclick()
+# método 03
+# you can use everything that's in this module
+# from turtle import *
+
+# Working with Alias name
+import turtle as t
+
+t = t.Turtle()
