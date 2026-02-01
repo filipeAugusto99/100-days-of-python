@@ -1,0 +1,3 @@
+.My name is Filipe and
+.I am studing python todayI am studing python todayI am studing python today !
+ I am studing python today !
