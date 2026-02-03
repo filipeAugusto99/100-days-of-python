@@ -1,6 +1,9 @@
-with open("my_file.txt") as file:
+# Absolute Path
+with open(r'\Users\filip_gxv027a\OneDrive\Documentos\new_file.txt') as file:
     contents = file.read()
     print(contents)
 
-with open("new_file.txt", mode="w") as file:
-    file.write("Next text.")
+# Relative Path
+with open(r'..\..\..\..\..\..\Users\filip_gxv027a\OneDrive\Documentos\new_file.txt') as file:
+    contents = file.read()
+    print(contents)
