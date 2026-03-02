@@ -1,4 +1,5 @@
 import requests
+from requests.auth import HTTPBasicAuth
 from datetime import datetime
 
 APP_ID = "app_c5675b8137bb46a2a331a26a"
@@ -20,7 +21,6 @@ exercise_params = {
 
 
 response = requests.post(url=main_url_endpoint, json=exercise_params, headers=headers)
-print(response.text)
 
 
 json_response = response.json()
@@ -43,6 +43,17 @@ for exercise in json_response["exercises"]:
         }
     }
 
-    sheet_response = requests.post(url=google_sheet_endpoint, json=workout_sheets)
+    #No authentication
+    # sheet_response = requests.post(url=google_sheet_endpoint, json=workout_sheets)
+
+    # Basic authentication
+    sheet_response = requests.post(
+        google_sheet_endpoint,
+        json=workout_sheets,
+        auth=(
+            "filipejingc",
+            "jingc@123"
+        )
+    )
     print(sheet_response.status_code)
     print(sheet_response.text)
