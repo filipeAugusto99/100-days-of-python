@@ -17,13 +17,14 @@ for article_tag in articles:
     link = article_tag.find(name="a").get("href")
     article_links.append(link)
 
-article_upvote = [score.getText() for score in soup.find_all(name="span", class_="score")]
+article_upvote = [int(score.getText().split()[0]) for score in soup.find_all(name="span", class_="score")]
 
+largest_number = max(article_upvote)
+largest_index = article_upvote.index(largest_number)
 
-print(article_texts)
-print(article_links)
+print(article_texts[largest_index])
+print(article_links[largest_index])
 print(article_upvote)
-
 
 
 
