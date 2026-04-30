@@ -16,4 +16,7 @@ driver.get("https://www.amazon.com.br/MSI-GeForce-RTX-3050-Ventus/dp/B0CSPNYB42/
 search_bar = driver.find_element(By.NAME, value="field-keywords")
 print(search_bar.get_attribute("placeholder"))
 #driver.close()
+
+
 driver.quit()
+
